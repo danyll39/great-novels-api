@@ -9,7 +9,7 @@ In the initial commit of this project you were provided with data on several nov
 
 Your API should support the routes listed below, pulling the data from the database via Sequelize models.
 
-## Requests and Expected Respones
+## Requests and Expected Response
 
 ### Get All Authors
 
@@ -220,7 +220,7 @@ In a branch called `part-two-answer`, continuing from your previous work, your t
 2) Create a .env and .env-sample file to support your dynamic configuration
 3) Update your API to support the new routes listed below, **all existing routes should continue to work**
 
-## Requests and Expected Respones
+## Requests and Expected Response
 
 ### Get Author by Last Name (partial match)
 
