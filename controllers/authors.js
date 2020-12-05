@@ -12,7 +12,14 @@ const getAuthorById = async (request, response) => {
   try {
     const { id } = request.params
 
-    const foundAuthor = await models.Authors.findOne({ where: { id } })
+    const foundAuthor = await models.Authors.findOne({
+      where: { id },
+      include: [
+        {
+          model: models.Novels
+        }
+      ],
+    },)
 
     return foundAuthor
 

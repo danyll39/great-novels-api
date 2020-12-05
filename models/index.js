@@ -10,11 +10,13 @@ const connection = new Sequelize('novels', 'novels', 'N0v3ls!', {
   host: 'localhost', dialect: 'mysql'
 
 })
-const Authors = AuthorsModel(connection, Sequelize)
-
+const Novels = NovelsModel(connection, Sequelize)
+const Authors = AuthorsModel(connection, Sequelize, Novels)
 const Genres = GenresModel(connection, Sequelize)
 
-const Novels = NovelsModel(connection, Sequelize)
 
+
+Authors.hasMany(Novels)
+Novels.belongsTo(Authors)
 
 module.exports = { Authors, Genres, Novels }

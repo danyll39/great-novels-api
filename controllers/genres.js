@@ -20,7 +20,7 @@ const getGenreById = async (request, response) => {
       ? response.send(foundGenre)
       : response.sendStatus(404)
   } catch (error) {
-    return response.status(500).send('Unable to retrieve author, please try again')
+    return response.status(500).send('Unable to retrieve genre, please try again')
   }
 }
 
