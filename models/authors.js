@@ -1,5 +1,5 @@
 const Authors = (connection, Sequelize) => {
-  return connection.define('authors', {
+  return connection.define('Authors', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     nameFirst: { type: Sequelize.STRING, allowNull: false },
     nameLast: { type: Sequelize.STRING, allowNull: false },

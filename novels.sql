@@ -48,7 +48,6 @@ CREATE TABLE novelsGenres (
   
 );
 
-
 INSERT INTO authors (nameFirst, nameLast) VALUES ("Bram", "Stroker");
 INSERT INTO authors (nameFirst, nameLast) VALUES ("Oscar", "Wilde");
 INSERT INTO authors (nameFirst, nameLast) VALUES ("Alice", "Walker");
@@ -101,6 +100,15 @@ INSERT INTO novels (title, authorId) VALUES ("Fahrenheit 451", 12);
 INSERT INTO novels (title, authorId) VALUES ("Animal Farm", 13);
 INSERT INTO novels (title, authorId) VALUES ("The time Machine", 14);
 INSERT INTO novels (title, authorId) VALUES ("Things Fall Apart", 15);
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +176,3 @@ INSERT INTO novelsGenres (novelId, genreId) VALUES (14, 17);
 INSERT INTO novelsGenres (novelId, genreId) VALUES (15, 7);
 INSERT INTO novelsGenres (novelId, genreId) VALUES (15, 10);
 INSERT INTO novelsGenres (novelId, genreId) VALUES (15, 2);
-
-
-
-
