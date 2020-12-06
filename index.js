@@ -14,7 +14,7 @@ app.get('/novels', getAllNovels)
 app.get('/novels/:id', getNovelById)
 
 app.all('*', (request, response) => {
-  return response.send(400)
+  return response.sendStatus(400)
 })
 
 

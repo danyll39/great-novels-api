@@ -1,7 +1,9 @@
-const Genres = (connection, Sequelize) => {
+const Genres = (connection, Sequelize, Novels) => {
   return connection.define('Genres', {
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-    name: { type: Sequelize.STRING, allowNull: false },
+    name: { type: Sequelize.STRING, allowNull: false, references: { model: Novels, key: 'id' } },
+
+
 
   }, {
     defaultScope: {
