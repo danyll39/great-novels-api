@@ -1,7 +1,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.creatTable('authors', {
+    await queryInterface.createTable('authors', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       nameFirst: { type: Sequelize.STRING, allowNull: false },
       nameLast: { type: Sequelize.STRING, allowNull: false },
@@ -12,7 +12,7 @@ module.exports = {
       },
       deletedAt: { type: Sequelize.DATE },
     })
-    await queryInterface.creatTable('genres', {
+    await queryInterface.createTable('genres', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       name: { type: Sequelize.STRING, allowNull: false },
       createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
