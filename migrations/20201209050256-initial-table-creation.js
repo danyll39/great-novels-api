@@ -22,6 +22,16 @@ module.exports = {
       },
       deletedAt: { type: Sequelize.DATE },
     })
+    await queryInterface.createTable('novelsGenres', {
+      novelId: { type: Sequelize.INTEGER, allowNull: false },
+      genreId: { type: Sequelize.INTEGER, allowNull: false },
+      createdAt: { type: Sequelize.DATE, defaultValue: Sequelize.literal('CURRENT_TIMESTAMP') },
+      updatedAt: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP')
+      },
+      deletedAt: { type: Sequelize.DATE },
+    })
 
     return queryInterface.createTable('novels', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
