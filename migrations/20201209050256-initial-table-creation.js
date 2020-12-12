@@ -62,6 +62,7 @@ module.exports = {
      */
     await queryInterface.dropTable('novels')
     await queryInterface.dropTable('genres')
+    await queryInterface.dropTable('novelsGenres')
 
     return queryInterface.dropTable('authors')
   }
