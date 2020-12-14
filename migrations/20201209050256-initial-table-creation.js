@@ -1,4 +1,3 @@
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('authors', {
@@ -51,7 +50,6 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
   },
-
   down: async (queryInterface) => {
     /**
      * Add reverting commands here.
@@ -67,4 +65,3 @@ module.exports = {
     return queryInterface.dropTable('authors')
   }
 }
-

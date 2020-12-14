@@ -1,5 +1,3 @@
-
-
 module.exports = {
   up: async (queryInterface) => {
     await queryInterface.bulkInsert('authors', [
@@ -14,7 +12,6 @@ module.exports = {
       { nameFirst: 'Robert', nameLast: 'Louis-Stevenson' },
       { nameFirst: 'Fyodor', nameLast: 'Dostoyevsky' },
       { nameFirst: 'Agatha', nameLast: 'Christie' },
-
       { nameFirst: 'Ray', nameLast: 'Bradbury' },
       { nameFirst: 'George', nameLast: 'Orwell' },
       { nameFirst: 'H.G.', nameLast: 'Wells' },
@@ -56,7 +53,6 @@ module.exports = {
       { title: 'Animal Farm', authorId: 13 },
       { title: 'The Time Machine', authorId: 14 },
       { title: 'Things Fall Apart', authorId: 15 },
-
     ])
 
     return queryInterface.bulkInsert('novelsGenres', [
@@ -69,7 +65,6 @@ module.exports = {
       { novelId: 2, genreId: 9 },
       { novelId: 2, genreId: 11 },
 
-
       { novelId: 3, genreId: 7 },
       { novelId: 3, genreId: 10 },
 
@@ -77,7 +72,6 @@ module.exports = {
       { novelId: 4, genreId: 10 },
       { novelId: 4, genreId: 14 },
       { novelId: 4, genreId: 18 },
-
 
       { novelId: 5, genreId: 7 },
       { novelId: 5, genreId: 10 },
@@ -96,7 +90,6 @@ module.exports = {
       { novelId: 8, genreId: 7 },
       { novelId: 8, genreId: 8 },
       { novelId: 8, genreId: 10 },
-
 
       { novelId: 9, genreId: 3 },
       { novelId: 9, genreId: 7 },
@@ -118,7 +111,6 @@ module.exports = {
       { novelId: 13, genreId: 7 },
       { novelId: 13, genreId: 15 },
 
-
       { novelId: 14, genreId: 7 },
       { novelId: 14, genreId: 15 },
       { novelId: 14, genreId: 17 },
@@ -126,13 +118,7 @@ module.exports = {
       { novelId: 15, genreId: 2 },
       { novelId: 15, genreId: 7 },
       { novelId: 15, genreId: 10 },
-
-
     ])
-
-
-
-
     /**
      * Add altering commands here.
      *
@@ -140,8 +126,6 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
   },
-
-
   down: async (queryInterface) => {
     await queryInterface.bulkDelete('novelsGenres')
     await queryInterface.bulkDelete('genres')
